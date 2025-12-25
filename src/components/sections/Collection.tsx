@@ -1,6 +1,7 @@
 import { Container } from "@/components/layout/Container";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
 const products = [
   {
@@ -37,13 +38,13 @@ const products = [
 
 export function Collection() {
   return (
-    <section id="collection" className="py-24 bg-[var(--bg3)]">
+    <section id="collection" className="py-24 bg-[var(--section2)]">
       <Container>
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[var(--text)] mb-4 uppercase tracking-wide">
+          <h2 className="section-title text-4xl md:text-5xl font-bold text-[var(--heading)] mb-4 uppercase tracking-wide">
             La Collection
           </h2>
-          <p className="text-[var(--muted)]">
+          <p className="text-[var(--body)]">
             Chaque pièce est une œuvre unique, conçue avec des matières nobles
             et un savoir-faire d&apos;exception.
           </p>
@@ -52,7 +53,7 @@ export function Collection() {
           {products.map((product, index) => (
             <Card
               key={index}
-              className="bg-[var(--card)] border-[var(--border)] overflow-hidden"
+              className="bg-[var(--cardBg)] border-[var(--cardBorder)] overflow-hidden"
             >
               <div className="relative aspect-square w-full">
                 <Image
@@ -63,13 +64,21 @@ export function Collection() {
                 />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-[var(--text)] font-semibold text-lg mb-2">
+                <h3 className="text-[var(--heading)] font-semibold text-lg mb-2">
                   {product.name}
                 </h3>
-                <p className="text-[var(--muted)] text-sm">
+                <p className="text-[var(--body)] text-sm">
                   {product.description}
                 </p>
               </CardContent>
+              <CardFooter className="p-6 pt-0 flex justify-center">
+                <Link
+                  href="#"
+                  className="text-[var(--body)] hover:text-[var(--heading)] transition-colors text-sm uppercase tracking-wide"
+                >
+                  VOIR LA PIÈCE
+                </Link>
+              </CardFooter>
             </Card>
           ))}
         </div>

@@ -23,11 +23,11 @@ export function Essence() {
   return (
     <section className="py-24 bg-[var(--bg)]">
       <Container>
-        <h2 className="text-4xl md:text-5xl font-bold text-[var(--text)] text-center mb-8 uppercase tracking-wide">
+        <h2 className="section-title text-4xl md:text-5xl font-bold text-[var(--heading)] text-center mb-8 uppercase tracking-wide">
           L&apos;Essence de l&apos;Agbada
         </h2>
         <div className="flex justify-center mb-16">
-          <div className="w-24 h-[1px] bg-[var(--border)]"></div>
+          <div className="w-24 h-[1px] bg-[var(--cardBorder)]"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {items.map((item, index) => {
@@ -35,12 +35,12 @@ export function Essence() {
             return (
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-6">
-                  <Icon className="w-12 h-12 text-[var(--text)]" />
+                  <Icon className="w-12 h-12 text-[var(--heading)]" />
                 </div>
-                <h3 className="text-xl font-semibold text-[var(--text)] mb-4">
+                <h3 className="text-xl font-semibold text-[var(--heading)] mb-4">
                   {item.title}
                 </h3>
-                <p className="text-[var(--muted)] leading-relaxed">
+                <p className="text-[var(--body)] leading-relaxed">
                   {item.text}
                 </p>
               </div>

@@ -22,12 +22,12 @@ const occasions = [
 
 export function Occasions() {
   return (
-    <section id="occasions" className="py-24 bg-[var(--bg3)]">
+    <section id="occasions" className="py-24 bg-[var(--section2)]">
       <Container>
-        <h2 className="text-4xl md:text-5xl font-bold text-[var(--text)] text-center mb-4 uppercase tracking-wide">
+        <h2 className="section-title text-4xl md:text-5xl font-bold text-[var(--heading)] text-center mb-4 uppercase tracking-wide">
           Les Occasions
         </h2>
-        <p className="text-[var(--muted)] text-center mb-16">
+        <p className="text-[var(--body)] text-center mb-16">
           L&apos;Agbada transcende le simple vêtement pour devenir le symbole
           des moments les plus marquants de la vie.
         </p>
@@ -35,7 +35,7 @@ export function Occasions() {
           {occasions.map((occasion, index) => (
             <Card
               key={index}
-              className="bg-[var(--card)] border-[var(--border)] overflow-hidden"
+              className="bg-[var(--cardBg)] border-[var(--cardBorder)] overflow-hidden"
             >
               <div className="relative aspect-square w-full">
                 <Image
@@ -46,10 +46,10 @@ export function Occasions() {
                 />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-[var(--text)] font-semibold text-xl mb-3">
+                <h3 className="text-[var(--heading)] font-semibold text-xl mb-3">
                   {occasion.title}
                 </h3>
-                <p className="text-[var(--muted)] text-sm leading-relaxed">
+                <p className="text-[var(--body)] text-sm leading-relaxed">
                   {occasion.text}
                 </p>
               </CardContent>

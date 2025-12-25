@@ -3,28 +3,28 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer id="contact" className="bg-[var(--bg2)] border-t border-[var(--border)] py-16">
+    <footer id="contact" className="bg-[var(--section)] border-t border-[var(--cardBorder)] py-16">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <h3 className="text-[var(--text)] font-semibold text-lg mb-4">
-              AGBADA MAISON
+            <h3 className="text-[var(--heading)] font-semibold text-lg mb-4">
+              AGBADA DRESS
             </h3>
-            <p className="text-[var(--muted)] text-sm leading-relaxed">
+            <p className="text-[var(--body)] text-sm leading-relaxed">
               Maison de création dédiée à l&apos;art et à l&apos;héritage de
               l&apos;Agbada. Chaque collection est une célébration de
               l&apos;élégance intemporelle et du savoir-faire.
             </p>
           </div>
           <div>
-            <h4 className="text-[var(--text)] font-medium mb-4 uppercase">
+            <h4 className="text-[var(--heading)] font-medium mb-4 uppercase">
               Navigation
             </h4>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="#collection"
-                  className="text-[var(--muted)] hover:text-[var(--text)] transition-colors text-sm"
+                  className="text-[var(--body)] hover:text-[var(--heading)] transition-colors text-sm"
                 >
                   Collection
                 </Link>
@@ -32,7 +32,7 @@ export function Footer() {
               <li>
                 <Link
                   href="#savoir-faire"
-                  className="text-[var(--muted)] hover:text-[var(--text)] transition-colors text-sm"
+                  className="text-[var(--body)] hover:text-[var(--heading)] transition-colors text-sm"
                 >
                   Savoir-faire
                 </Link>
@@ -40,7 +40,7 @@ export function Footer() {
               <li>
                 <Link
                   href="#heritage"
-                  className="text-[var(--muted)] hover:text-[var(--text)] transition-colors text-sm"
+                  className="text-[var(--body)] hover:text-[var(--heading)] transition-colors text-sm"
                 >
                   Héritage
                 </Link>
@@ -48,7 +48,7 @@ export function Footer() {
               <li>
                 <Link
                   href="#contact"
-                  className="text-[var(--muted)] hover:text-[var(--text)] transition-colors text-sm"
+                  className="text-[var(--body)] hover:text-[var(--heading)] transition-colors text-sm"
                 >
                   Commander
                 </Link>
@@ -56,32 +56,23 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-[var(--text)] font-medium mb-4 uppercase">
+            <h4 className="text-[var(--heading)] font-medium mb-4 uppercase">
               Contact
             </h4>
-            <p className="text-[var(--muted)] text-sm mb-2">
-              contact@agbadamaison.com
-            </p>
-            <p className="text-[var(--muted)] text-sm mb-4">+33 6 00 00 00 00</p>
+            <p className="text-[var(--body)] text-sm mb-4">+33 6 00 00 00 00</p>
             <div className="flex gap-4">
               <a
                 href="#"
-                className="text-[var(--muted)] hover:text-[var(--text)] transition-colors text-sm"
+                className="text-[var(--body)] hover:text-[var(--heading)] transition-colors text-sm"
               >
                 Instagram
-              </a>
-              <a
-                href="#"
-                className="text-[var(--muted)] hover:text-[var(--text)] transition-colors text-sm"
-              >
-                Facebook
               </a>
             </div>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-[var(--border)]">
-          <p className="text-center text-[var(--subtle)] text-sm">
-            © 2023 Agbada Maison. Tous droits réservés.
+        <div className="mt-12 pt-8 border-t border-[var(--cardBorder)]">
+          <p className="text-center text-[var(--muted)] text-sm">
+            © 2023 Agbada Dress. Tous droits réservés.
           </p>
         </div>
       </Container>

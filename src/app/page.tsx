@@ -8,20 +8,39 @@ import { Matieres } from "@/components/sections/Matieres";
 import { Occasions } from "@/components/sections/Occasions";
 import { Symbole } from "@/components/sections/Symbole";
 import { FinalCta } from "@/components/sections/FinalCta";
+import { FadeInSection } from "@/components/ui/fade-in-section";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
 
 export default function Home() {
   return (
     <main>
       <Navbar />
       <Hero />
-      <Essence />
-      <Collection />
-      <SavoirFaire />
-      <Matieres />
-      <Occasions />
-      <Symbole />
-      <FinalCta />
-      <Footer />
+      <FadeInSection delay={0}>
+        <Essence />
+      </FadeInSection>
+      <FadeInSection delay={100}>
+        <Collection />
+      </FadeInSection>
+      <FadeInSection delay={200}>
+        <SavoirFaire />
+      </FadeInSection>
+      <FadeInSection delay={100}>
+        <Matieres />
+      </FadeInSection>
+      <FadeInSection delay={200}>
+        <Occasions />
+      </FadeInSection>
+      <FadeInSection delay={100}>
+        <Symbole />
+      </FadeInSection>
+      <FadeInSection delay={200}>
+        <FinalCta />
+      </FadeInSection>
+      <FadeInSection delay={100}>
+        <Footer />
+      </FadeInSection>
+      <ScrollToTop />
     </main>
   );
 }
