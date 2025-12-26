@@ -8,46 +8,48 @@ export function SavoirFaire() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="section-title text-4xl md:text-5xl font-bold text-[var(--heading)] mb-8 uppercase tracking-wide">
-              Le Savoir-Faire
+              L&apos;Excellence
             </h2>
             <p className="text-[var(--body)] mb-6 leading-relaxed">
-              Chaque Agbada est le fruit d&apos;un savoir-faire ancestral,
-              transmis de génération en génération. Nous sélectionnons les
-              meilleurs artisans et les matières les plus nobles pour créer des
-              pièces uniques.
+              Chaque Agbada est pensé pour offrir un niveau élevé de qualité,
+              tant dans le choix des tissus que dans le rendu final. Les matières
+              sont sélectionnées pour leur tenue, leur confort et leur durabilité,
+              afin de garantir une pièce élégante qui traverse le temps.
             </p>
             <p className="text-[var(--body)] mb-6 leading-relaxed">
-              Des broderies faites à la main sur tissus sélectionnés avec
-              soin, pour un résultat unique.
+              Les broderies apportent du relief et du caractère, parfaitement
+              intégrées aux étoffes pour un rendu harmonieux et structuré.
+              L&apos;ensemble offre une silhouette ample, fluide et élégante,
+              adaptée aussi bien aux grandes occasions qu&apos;aux moments
+              d&apos;exception.
             </p>
             <p className="text-[var(--body)] mb-8 leading-relaxed">
-              Un artisanat précis, un esthétisme sans contraintes, une maîtrise
-              du geste et une excellence qui se transmet de génération en
-              génération.
+              Des pièces équilibrées, aux lignes maîtrisées, où chaque détail
+              contribue à une allure distinguée et affirmée.
             </p>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <span className="text-[var(--body)] mr-3">✓</span>
                 <span className="text-[var(--body)]">
-                  Réalisation entièrement faite à la main
+                  Tissus de qualité supérieure
                 </span>
               </li>
               <li className="flex items-start">
                 <span className="text-[var(--body)] mr-3">✓</span>
                 <span className="text-[var(--body)]">
-                  Pièces uniques et sur mesure
+                  Broderies nettes et précises
                 </span>
               </li>
               <li className="flex items-start">
                 <span className="text-[var(--body)] mr-3">✓</span>
                 <span className="text-[var(--body)]">
-                  Techniques ancestrales préservées
+                  Finitions propres et soignées
                 </span>
               </li>
               <li className="flex items-start">
                 <span className="text-[var(--body)] mr-3">✓</span>
                 <span className="text-[var(--body)]">
-                  Détails et finitions impeccables
+                  Confort optimal et excellente tenue au porté
                 </span>
               </li>
             </ul>

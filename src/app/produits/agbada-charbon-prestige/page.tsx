@@ -5,7 +5,6 @@ import { Footer } from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   getPreviousProduit,
@@ -13,9 +12,9 @@ import {
 } from "@/lib/produits";
 
 export const metadata: Metadata = {
-  title: "Agbada Charbon Prestige | AGBADA DRESS",
+  title: "Agbada Rose Corail | AGBADA DRESS",
   description:
-    "L'Agbada Charbon Prestige incarne la sobriété élégante et la distinction. Sa couleur charbon apporte une touche de modernité.",
+    "L'Agbada Rose Corail incarne l'élégance raffinée et la distinction. Sa couleur rose corail avec ses broderies dorées apporte une touche de modernité.",
 };
 
 export default function ProduitPage() {
@@ -33,18 +32,18 @@ export default function ProduitPage() {
           </Link>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="relative aspect-square w-full">
+            <div className="relative aspect-square w-full overflow-hidden rounded-lg group">
               <Image
-                src="/images/collection-4.png"
-                alt="Agbada Charbon Prestige"
+                src="/images/Modele-4.png"
+                alt="Agbada Rose Corail"
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
               />
             </div>
 
             <div>
               <h1 className="section-title text-4xl md:text-5xl font-bold text-[var(--heading)] mb-4 uppercase tracking-wide">
-                Agbada Charbon Prestige
+                Agbada Rose Corail
               </h1>
               <p className="text-[var(--body)] text-lg mb-6">
                 Sobriété et distinction
@@ -55,11 +54,13 @@ export default function ProduitPage() {
                   Description
                 </h2>
                 <p className="text-[var(--body)] leading-relaxed mb-6">
-                  L&apos;Agbada Charbon Prestige incarne la sobriété élégante et
-                  la distinction. Sa couleur charbon apporte une touche de
-                  modernité tout en conservant la noblesse de l&apos;Agbada
-                  traditionnel. Une pièce qui s&apos;impose par sa simplicité
-                  raffinée.
+                  L&apos;Agbada Rose Corail incarne l&apos;élégance raffinée et
+                  la distinction. Sa couleur rose corail avec ses broderies
+                  élaborées en magenta foncé et fil doré crée des motifs
+                  géométriques complexes autour de l&apos;encolure. Cette pièce
+                  apporte une touche de modernité tout en conservant la noblesse
+                  de l&apos;Agbada traditionnel. Une création qui s&apos;impose
+                  par sa simplicité raffinée.
                 </p>
               </div>
 
@@ -96,37 +97,43 @@ export default function ProduitPage() {
               </div>
 
               <div className="mb-8">
-                <h2 className="text-[var(--heading)] font-semibold text-xl mb-6">
+                <h2 className="text-[var(--heading)] font-semibold text-xl mb-4">
                   Occasions
                 </h2>
-                <Card className="bg-[var(--cardBg)] border-[var(--cardBorder)] overflow-hidden max-w-md">
-                  <div className="relative aspect-square w-full">
-                    <Image
-                      src="/images/occasion-3.png"
-                      alt="Événements Officiels"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-[var(--heading)] font-semibold text-xl mb-3">
-                      Événements Officiels
-                    </h3>
-                    <p className="text-[var(--body)] text-sm leading-relaxed">
-                      Pour les réceptions, galas et événements officiels,
-                      l&apos;Agbada affirme votre présence, votre dignité et
-                      l&apos;importance de ces moments.
-                    </p>
-                  </CardContent>
-                </Card>
+                <p className="text-[var(--body)] leading-relaxed">
+                  Soirées élégantes, réceptions privées, dîners habillés,
+                  événements culturels.
+                </p>
               </div>
 
-              <Button
-                size="lg"
-                className="bg-[var(--btnBg)] text-[var(--btnText)] border border-[var(--btnBorder)] hover:bg-[var(--btnBg)]/90 uppercase tracking-wide font-semibold px-8 py-6 text-base w-full md:w-auto"
-              >
-                COMMANDER UNE PIÈCE
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="https://paypal.me/votrecompte"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-[#0070ba] hover:bg-[#005ea6] text-white border-0 uppercase tracking-wide font-semibold px-8 py-6 text-base w-full"
+                  >
+                    PayPal
+                  </Button>
+                </Link>
+                <Link
+                  href="https://wa.me/33600000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-[#25D366] hover:bg-[#20BA5A] text-white border-0 uppercase tracking-wide font-semibold px-8 py-6 text-base w-full"
+                  >
+                    WhatsApp
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
 

@@ -5,7 +5,6 @@ import { Footer } from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   getPreviousProduit,
@@ -13,9 +12,9 @@ import {
 } from "@/lib/produits";
 
 export const metadata: Metadata = {
-  title: "Agbada Ivoire Royal | AGBADA DRESS",
+  title: "Caftan Rouge Écarlate | AGBADA DRESS",
   description:
-    "L'Agbada Ivoire Royal incarne l'élégance dans sa forme la plus pure. Conçu avec des matières nobles et un savoir-faire d'exception.",
+    "Le Caftan Rouge Écarlate incarne une féminité affirmée et une élégance majestueuse. Sa teinte rouge intense, symbole de puissance et de passion.",
 };
 
 export default function ProduitPage() {
@@ -33,18 +32,18 @@ export default function ProduitPage() {
           </Link>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="relative aspect-square w-full">
+            <div className="relative aspect-square w-full overflow-hidden rounded-lg group">
               <Image
-                src="/images/collection-1.png"
-                alt="Agbada Ivoire Royal"
+                src="/images/Modele-1.png"
+                alt="Caftan Rouge Écarlate"
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
               />
             </div>
 
             <div>
               <h1 className="section-title text-4xl md:text-5xl font-bold text-[var(--heading)] mb-4 uppercase tracking-wide">
-                Agbada Ivoire Royal
+                Caftan Rouge Écarlate
               </h1>
               <p className="text-[var(--body)] text-lg mb-6">
                 Élégance moderne et intemporelle
@@ -55,11 +54,21 @@ export default function ProduitPage() {
                   Description
                 </h2>
                 <p className="text-[var(--body)] leading-relaxed mb-6">
-                  L&apos;Agbada Ivoire Royal incarne l&apos;élégance dans sa
-                  forme la plus pure. Conçu avec des matières nobles et un
-                  savoir-faire d&apos;exception, cette pièce unique allie
-                  modernité et tradition. Chaque détail a été pensé pour vous
-                  offrir une expérience vestimentaire incomparable.
+                  Le Caftan Rouge Écarlate incarne une féminité affirmée et une
+                  élégance majestueuse. Sa teinte rouge intense, symbole de
+                  puissance et de passion, est sublimée par des broderies
+                  raffinées qui structurent délicatement la silhouette.
+                </p>
+                <p className="text-[var(--body)] leading-relaxed mb-6">
+                  Confectionné dans un tissu satiné noble, ce caftan offre une
+                  fluidité parfaite et un tombé somptueux. Les finitions brodées
+                  au niveau de l&apos;encolure, de la poitrine et des manches
+                  apportent une touche précieuse, pensée pour les grandes
+                  occasions.
+                </p>
+                <p className="text-[var(--body)] leading-relaxed mb-6">
+                  Cette pièce est idéale pour celles qui souhaitent allier
+                  tradition, modernité et présence charismatique.
                 </p>
               </div>
 
@@ -71,62 +80,74 @@ export default function ProduitPage() {
                   <li className="flex items-start">
                     <span className="text-[var(--body)] mr-3">•</span>
                     <span className="text-[var(--body)]">
-                      Tissu noble sélectionné avec soin
+                      Tissu satiné haut de gamme
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--body)] mr-3">•</span>
                     <span className="text-[var(--body)]">
-                      Broderies réalisées à la main
+                      Broderies délicates réalisées avec précision
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--body)] mr-3">•</span>
                     <span className="text-[var(--body)]">
-                      Finitions impeccables
+                      Coupe fluide et élégante
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--body)] mr-3">•</span>
                     <span className="text-[var(--body)]">
-                      Coupe sur mesure disponible
+                      Manches larges avec finitions brodées
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[var(--body)] mr-3">•</span>
+                    <span className="text-[var(--body)]">
+                      Confort et maintien parfaits
                     </span>
                   </li>
                 </ul>
               </div>
 
               <div className="mb-8">
-                <h2 className="text-[var(--heading)] font-semibold text-xl mb-6">
+                <h2 className="text-[var(--heading)] font-semibold text-xl mb-4">
                   Occasions
                 </h2>
-                <Card className="bg-[var(--cardBg)] border-[var(--cardBorder)] overflow-hidden max-w-md">
-                  <div className="relative aspect-square w-full">
-                    <Image
-                      src="/images/occasion-1.png"
-                      alt="Mariages"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-[var(--heading)] font-semibold text-xl mb-3">
-                      Mariages
-                    </h3>
-                    <p className="text-[var(--body)] text-sm leading-relaxed">
-                      Le jour J, pour une union sacrée, l&apos;Agbada est le
-                      vêtement d&apos;excellence qui honore ce moment unique, un
-                      symbole de prestige et d&apos;élégance.
-                    </p>
-                  </CardContent>
-                </Card>
+                <p className="text-[var(--body)] leading-relaxed">
+                  Mariages, cérémonies officielles, fêtes religieuses,
+                  événements prestigieux.
+                </p>
               </div>
 
-              <Button
-                size="lg"
-                className="bg-[var(--btnBg)] text-[var(--btnText)] border border-[var(--btnBorder)] hover:bg-[var(--btnBg)]/90 uppercase tracking-wide font-semibold px-8 py-6 text-base w-full md:w-auto"
-              >
-                COMMANDER UNE PIÈCE
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="https://paypal.me/votrecompte"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-[#0070ba] hover:bg-[#005ea6] text-white border-0 uppercase tracking-wide font-semibold px-8 py-6 text-base w-full"
+                  >
+                    PayPal
+                  </Button>
+                </Link>
+                <Link
+                  href="https://wa.me/33600000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-[#25D366] hover:bg-[#20BA5A] text-white border-0 uppercase tracking-wide font-semibold px-8 py-6 text-base w-full"
+                  >
+                    WhatsApp
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
 

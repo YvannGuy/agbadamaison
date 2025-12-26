@@ -5,7 +5,6 @@ import { Footer } from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   getPreviousProduit,
@@ -13,9 +12,9 @@ import {
 } from "@/lib/produits";
 
 export const metadata: Metadata = {
-  title: "Agbada Terre Noble | AGBADA DRESS",
+  title: "Agbada Ivoire Terre d'Origine | AGBADA DRESS",
   description:
-    "L'Agbada Terre Noble allie force et élégance dans une création exceptionnelle. Sa couleur terre évoque la stabilité et la noblesse.",
+    "L'Agbada Ivoire Terre d'Origine rend hommage aux racines et à l'héritage africain. Ses broderies aux tons terre rappellent la sagesse et l'élégance naturelle.",
 };
 
 export default function ProduitPage() {
@@ -33,21 +32,21 @@ export default function ProduitPage() {
           </Link>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="relative aspect-square w-full">
+            <div className="relative aspect-square w-full overflow-hidden rounded-lg group">
               <Image
-                src="/images/collection-6.png"
-                alt="Agbada Terre Noble"
+                src="/images/Modele-6.png"
+                alt="Agbada Ivoire Terre d'Origine"
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
               />
             </div>
 
             <div>
               <h1 className="section-title text-4xl md:text-5xl font-bold text-[var(--heading)] mb-4 uppercase tracking-wide">
-                Agbada Terre Noble
+                Agbada Ivoire Terre d&apos;Origine
               </h1>
               <p className="text-[var(--body)] text-lg mb-6">
-                Force et élégance naturelle
+                L&apos;authenticité africaine dans toute sa noblesse
               </p>
 
               <div className="mb-8">
@@ -55,11 +54,16 @@ export default function ProduitPage() {
                   Description
                 </h2>
                 <p className="text-[var(--body)] leading-relaxed mb-6">
-                  L&apos;Agbada Terre Noble allie force et élégance dans une
-                  création exceptionnelle. Sa couleur terre évoque la stabilité et
-                  la noblesse, tandis que son design contemporain apporte une
-                  touche de modernité. Une pièce qui incarne la puissance
-                  tranquille.
+                  L&apos;Agbada Ivoire Terre d&apos;Origine rend hommage aux
+                  racines et à l&apos;héritage africain. Ses broderies aux tons
+                  terre rappellent la sagesse, la stabilité et l&apos;élégance
+                  naturelle.
+                </p>
+                <p className="text-[var(--body)] leading-relaxed mb-6">
+                  Cette pièce s&apos;adresse à l&apos;homme moderne attaché à ses
+                  valeurs, recherchant une tenue à la fois sobre, puissante et
+                  profondément symbolique. Chaque détail est pensé pour offrir
+                  une allure distinguée sans ostentation.
                 </p>
               </div>
 
@@ -71,62 +75,68 @@ export default function ProduitPage() {
                   <li className="flex items-start">
                     <span className="text-[var(--body)] mr-3">•</span>
                     <span className="text-[var(--body)]">
-                      Textile de qualité supérieure
+                      Tissu ivoire doux et respirant
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--body)] mr-3">•</span>
                     <span className="text-[var(--body)]">
-                      Broderies raffinées
+                      Broderies inspirées des motifs traditionnels
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--body)] mr-3">•</span>
                     <span className="text-[var(--body)]">
-                      Coupe structurée
+                      Finitions soignées et durables
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--body)] mr-3">•</span>
                     <span className="text-[var(--body)]">
-                      Présence imposante
+                      Coupe fluide et majestueuse
                     </span>
                   </li>
                 </ul>
               </div>
 
               <div className="mb-8">
-                <h2 className="text-[var(--heading)] font-semibold text-xl mb-6">
+                <h2 className="text-[var(--heading)] font-semibold text-xl mb-4">
                   Occasions
                 </h2>
-                <Card className="bg-[var(--cardBg)] border-[var(--cardBorder)] overflow-hidden max-w-md">
-                  <div className="relative aspect-square w-full">
-                    <Image
-                      src="/images/occasion-3.png"
-                      alt="Événements Officiels"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-[var(--heading)] font-semibold text-xl mb-3">
-                      Événements Officiels
-                    </h3>
-                    <p className="text-[var(--body)] text-sm leading-relaxed">
-                      Pour les réceptions, galas et événements officiels,
-                      l&apos;Agbada affirme votre présence, votre dignité et
-                      l&apos;importance de ces moments.
-                    </p>
-                  </CardContent>
-                </Card>
+                <p className="text-[var(--body)] leading-relaxed">
+                  Cérémonies traditionnelles, célébrations culturelles,
+                  événements familiaux importants.
+                </p>
               </div>
 
-              <Button
-                size="lg"
-                className="bg-[var(--btnBg)] text-[var(--btnText)] border border-[var(--btnBorder)] hover:bg-[var(--btnBg)]/90 uppercase tracking-wide font-semibold px-8 py-6 text-base w-full md:w-auto"
-              >
-                COMMANDER UNE PIÈCE
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="https://paypal.me/votrecompte"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-[#0070ba] hover:bg-[#005ea6] text-white border-0 uppercase tracking-wide font-semibold px-8 py-6 text-base w-full"
+                  >
+                    PayPal
+                  </Button>
+                </Link>
+                <Link
+                  href="https://wa.me/33600000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-[#25D366] hover:bg-[#20BA5A] text-white border-0 uppercase tracking-wide font-semibold px-8 py-6 text-base w-full"
+                  >
+                    WhatsApp
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
 

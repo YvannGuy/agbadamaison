@@ -5,7 +5,6 @@ import { Footer } from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   getPreviousProduit,
@@ -13,9 +12,9 @@ import {
 } from "@/lib/produits";
 
 export const metadata: Metadata = {
-  title: "Agbada Indigo Nuit | AGBADA DRESS",
+  title: "Caftan Rose Nude Bicolore | AGBADA DRESS",
   description:
-    "L'Agbada Indigo Nuit vous transporte dans un univers de sophistication. Sa couleur profonde et majestueuse évoque la noblesse et le prestige.",
+    "Le Caftan Rose Nude Bicolore séduit par son harmonie subtile entre deux tons rosés, créant un contraste délicat et résolument moderne.",
 };
 
 export default function ProduitPage() {
@@ -33,21 +32,21 @@ export default function ProduitPage() {
           </Link>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="relative aspect-square w-full">
+            <div className="relative aspect-square w-full overflow-hidden rounded-lg group">
               <Image
-                src="/images/collection-2.png"
-                alt="Agbada Indigo Nuit"
+                src="/images/Modele-2.png"
+                alt="Caftan Rose Nude Bicolore"
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
               />
             </div>
 
             <div>
               <h1 className="section-title text-4xl md:text-5xl font-bold text-[var(--heading)] mb-4 uppercase tracking-wide">
-                Agbada Indigo Nuit
+                Caftan Rose Nude Bicolore
               </h1>
               <p className="text-[var(--body)] text-lg mb-6">
-                Couleur intense et majestueuse
+                Douceur, finesse et modernité
               </p>
 
               <div className="mb-8">
@@ -55,10 +54,21 @@ export default function ProduitPage() {
                   Description
                 </h2>
                 <p className="text-[var(--body)] leading-relaxed mb-6">
-                  L&apos;Agbada Indigo Nuit vous transporte dans un univers de
-                  sophistication. Sa couleur profonde et majestueuse évoque la
-                  noblesse et le prestige. Une pièce signature qui affirme votre
-                  présence avec élégance.
+                  Le Caftan Rose Nude Bicolore séduit par son harmonie subtile
+                  entre deux tons rosés, créant un contraste délicat et
+                  résolument moderne. Son design épuré est rehaussé par un détail
+                  textile travaillé à l&apos;épaule, apportant une signature
+                  unique et élégante à la pièce.
+                </p>
+                <p className="text-[var(--body)] leading-relaxed mb-6">
+                  Sa coupe ample assure une grande liberté de mouvement tout en
+                  valorisant la silhouette. Léger, fluide et agréable à porter,
+                  ce caftan est pensé pour une femme raffinée, à la recherche
+                  d&apos;une élégance naturelle et contemporaine.
+                </p>
+                <p className="text-[var(--body)] leading-relaxed mb-6">
+                  Une pièce idéale pour celles qui aiment les lignes sobres avec
+                  une touche artistique.
                 </p>
               </div>
 
@@ -70,62 +80,74 @@ export default function ProduitPage() {
                   <li className="flex items-start">
                     <span className="text-[var(--body)] mr-3">•</span>
                     <span className="text-[var(--body)]">
-                      Teinture naturelle de qualité exceptionnelle
+                      Tissu fluide et léger
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--body)] mr-3">•</span>
                     <span className="text-[var(--body)]">
-                      Broderies artisanales uniques
+                      Design bicolore harmonieux
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--body)] mr-3">•</span>
                     <span className="text-[var(--body)]">
-                      Textile haut de gamme
+                      Détail textile décoratif à l&apos;épaule
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--body)] mr-3">•</span>
                     <span className="text-[var(--body)]">
-                      Résistant et durable
+                      Coupe ample et confortable
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[var(--body)] mr-3">•</span>
+                    <span className="text-[var(--body)]">
+                      Finitions soignées
                     </span>
                   </li>
                 </ul>
               </div>
 
               <div className="mb-8">
-                <h2 className="text-[var(--heading)] font-semibold text-xl mb-6">
+                <h2 className="text-[var(--heading)] font-semibold text-xl mb-4">
                   Occasions
                 </h2>
-                <Card className="bg-[var(--cardBg)] border-[var(--cardBorder)] overflow-hidden max-w-md">
-                  <div className="relative aspect-square w-full">
-                    <Image
-                      src="/images/occasion-2.png"
-                      alt="Cérémonies Traditionnelles"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-[var(--heading)] font-semibold text-xl mb-3">
-                      Cérémonies Traditionnelles
-                    </h3>
-                    <p className="text-[var(--body)] text-sm leading-relaxed">
-                      Lors des rituels et célébrations, l&apos;Agbada est le
-                      vêtement qui incarne la dignité et le respect des
-                      traditions ancestrales.
-                    </p>
-                  </CardContent>
-                </Card>
+                <p className="text-[var(--body)] leading-relaxed">
+                  Soirées élégantes, réceptions privées, dîners habillés,
+                  événements culturels.
+                </p>
               </div>
 
-              <Button
-                size="lg"
-                className="bg-[var(--btnBg)] text-[var(--btnText)] border border-[var(--btnBorder)] hover:bg-[var(--btnBg)]/90 uppercase tracking-wide font-semibold px-8 py-6 text-base w-full md:w-auto"
-              >
-                COMMANDER UNE PIÈCE
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="https://paypal.me/votrecompte"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-[#0070ba] hover:bg-[#005ea6] text-white border-0 uppercase tracking-wide font-semibold px-8 py-6 text-base w-full"
+                  >
+                    PayPal
+                  </Button>
+                </Link>
+                <Link
+                  href="https://wa.me/33600000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-[#25D366] hover:bg-[#20BA5A] text-white border-0 uppercase tracking-wide font-semibold px-8 py-6 text-base w-full"
+                  >
+                    WhatsApp
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
 

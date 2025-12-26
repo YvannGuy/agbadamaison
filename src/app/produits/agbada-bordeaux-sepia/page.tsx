@@ -5,7 +5,6 @@ import { Footer } from "@/components/layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   getPreviousProduit,
@@ -13,9 +12,9 @@ import {
 } from "@/lib/produits";
 
 export const metadata: Metadata = {
-  title: "Agbada Bordeaux Sépia | AGBADA DRESS",
+  title: "Agbada Bleu Nuit Impérial | AGBADA DRESS",
   description:
-    "L'Agbada Bordeaux Sépia allie raffinement et tradition dans une harmonie parfaite. Cette pièce exceptionnelle honore l'héritage culturel.",
+    "L'Agbada Bleu Nuit Impérial séduit par son contraste fort et élégant. Le bleu profond évoque la maîtrise et la modernité.",
 };
 
 export default function ProduitPage() {
@@ -33,21 +32,21 @@ export default function ProduitPage() {
           </Link>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="relative aspect-square w-full">
+            <div className="relative aspect-square w-full overflow-hidden rounded-lg group">
               <Image
-                src="/images/collection-3.png"
-                alt="Agbada Bordeaux Sépia"
+                src="/images/Modele-3.png"
+                alt="Agbada Bleu Nuit Impérial"
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
               />
             </div>
 
             <div>
               <h1 className="section-title text-4xl md:text-5xl font-bold text-[var(--heading)] mb-4 uppercase tracking-wide">
-                Agbada Bordeaux Sépia
+                Agbada Bleu Nuit Impérial
               </h1>
               <p className="text-[var(--body)] text-lg mb-6">
-                Raffinement et tradition
+                Sobriété moderne, charisme affirmé
               </p>
 
               <div className="mb-8">
@@ -55,10 +54,16 @@ export default function ProduitPage() {
                   Description
                 </h2>
                 <p className="text-[var(--body)] leading-relaxed mb-6">
-                  L&apos;Agbada Bordeaux Sépia allie raffinement et tradition
-                  dans une harmonie parfaite. Cette pièce exceptionnelle honore
-                  l&apos;héritage culturel tout en s&apos;adaptant aux codes
-                  contemporains. Un vêtement qui raconte une histoire.
+                  L&apos;Agbada Bleu Nuit Impérial séduit par son contraste fort
+                  et élégant. Le bleu profond évoque la maîtrise et la
+                  modernité, tandis que les broderies jaunes apportent lumière
+                  et caractère à la silhouette.
+                </p>
+                <p className="text-[var(--body)] leading-relaxed mb-6">
+                  Conçu pour l&apos;homme confiant et élégant, cet agbada
+                  s&apos;impose par sa présence tout en restant raffiné. Une
+                  pièce idéale pour ceux qui veulent se distinguer avec
+                  subtilité.
                 </p>
               </div>
 
@@ -70,62 +75,68 @@ export default function ProduitPage() {
                   <li className="flex items-start">
                     <span className="text-[var(--body)] mr-3">•</span>
                     <span className="text-[var(--body)]">
-                      Matières nobles sélectionnées
+                      Tissu fluide de haute qualité
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--body)] mr-3">•</span>
                     <span className="text-[var(--body)]">
-                      Techniques ancestrales préservées
+                      Broderies géométriques modernes
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--body)] mr-3">•</span>
                     <span className="text-[var(--body)]">
-                      Design intemporel
+                      Coupe traditionnelle revisitée
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--body)] mr-3">•</span>
                     <span className="text-[var(--body)]">
-                      Confort exceptionnel
+                      Excellente tenue dans le temps
                     </span>
                   </li>
                 </ul>
               </div>
 
               <div className="mb-8">
-                <h2 className="text-[var(--heading)] font-semibold text-xl mb-6">
+                <h2 className="text-[var(--heading)] font-semibold text-xl mb-4">
                   Occasions
                 </h2>
-                <Card className="bg-[var(--cardBg)] border-[var(--cardBorder)] overflow-hidden max-w-md">
-                  <div className="relative aspect-square w-full">
-                    <Image
-                      src="/images/occasion-1.png"
-                      alt="Mariages"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-[var(--heading)] font-semibold text-xl mb-3">
-                      Mariages
-                    </h3>
-                    <p className="text-[var(--body)] text-sm leading-relaxed">
-                      Le jour J, pour une union sacrée, l&apos;Agbada est le
-                      vêtement d&apos;excellence qui honore ce moment unique, un
-                      symbole de prestige et d&apos;élégance.
-                    </p>
-                  </CardContent>
-                </Card>
+                <p className="text-[var(--body)] leading-relaxed">
+                  Soirées élégantes, événements professionnels, cérémonies
+                  modernes.
+                </p>
               </div>
 
-              <Button
-                size="lg"
-                className="bg-[var(--btnBg)] text-[var(--btnText)] border border-[var(--btnBorder)] hover:bg-[var(--btnBg)]/90 uppercase tracking-wide font-semibold px-8 py-6 text-base w-full md:w-auto"
-              >
-                COMMANDER UNE PIÈCE
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="https://paypal.me/votrecompte"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-[#0070ba] hover:bg-[#005ea6] text-white border-0 uppercase tracking-wide font-semibold px-8 py-6 text-base w-full"
+                  >
+                    PayPal
+                  </Button>
+                </Link>
+                <Link
+                  href="https://wa.me/33600000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-[#25D366] hover:bg-[#20BA5A] text-white border-0 uppercase tracking-wide font-semibold px-8 py-6 text-base w-full"
+                  >
+                    WhatsApp
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
 
