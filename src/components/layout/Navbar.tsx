@@ -14,7 +14,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link
             href="/"
-            className="text-[var(--heading)] font-semibold text-lg"
+            className="section-title text-[var(--heading)] font-semibold text-lg"
           >
             AGBADA DRESS
           </Link>

@@ -6,31 +6,37 @@ import Link from "next/link";
 const products = [
   {
     name: "Agbada Ivoire Royal",
+    slug: "agbada-ivoire-royal",
     image: "collection-1.png",
     description: "Élégance moderne et intemporelle",
   },
   {
     name: "Agbada Indigo Nuit",
+    slug: "agbada-indigo-nuit",
     image: "collection-2.png",
     description: "Couleur intense et majestueuse",
   },
   {
     name: "Agbada Bordeaux Sépia",
+    slug: "agbada-bordeaux-sepia",
     image: "collection-3.png",
     description: "Raffinement et tradition",
   },
   {
     name: "Agbada Charbon Prestige",
+    slug: "agbada-charbon-prestige",
     image: "collection-4.png",
     description: "Sobriété et distinction",
   },
   {
     name: "Agbada Sable Ancien",
+    slug: "agbada-sable-ancien",
     image: "collection-5.png",
     description: "Authenticité et caractère",
   },
   {
     name: "Agbada Terre Noble",
+    slug: "agbada-terre-noble",
     image: "collection-6.png",
     description: "Force et élégance naturelle",
   },
@@ -73,7 +79,7 @@ export function Collection() {
               </CardContent>
               <CardFooter className="p-6 pt-0 flex justify-center">
                 <Link
-                  href="#"
+                  href={`/produits/${product.slug}`}
                   className="text-[var(--body)] hover:text-[var(--heading)] transition-colors text-sm uppercase tracking-wide"
                 >
                   VOIR LA PIÈCE
